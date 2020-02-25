@@ -3,9 +3,10 @@
 
 Installation
 
-```npm install -g @stoplight/spectral
-  OR
-  yarn global add @stoplight/spectral
+```
+npm install -g @stoplight/spectral
+OR
+yarn global add @stoplight/spectral
 ```
 Run
 
