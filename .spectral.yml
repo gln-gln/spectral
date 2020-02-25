@@ -1,0 +1,24 @@
+rules:
+ check-x-visibility:
+    given: $.info
+    severity: error
+    description: 'info section needs x-visibility field'
+    recommended: true
+    then:
+      field: x-visibility
+      function: truthy
+ check-version:
+    given: '$.info.version'
+    severity: error
+    then:
+      function: pattern
+      functionOptions:
+        match: "3.0.0"  
+ path-no-trailing-slash:
+    description: Paths should not end with `#/`.
+    type: style
+    given: "$.paths[*]~"
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: ".+\/$"
